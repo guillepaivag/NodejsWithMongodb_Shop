@@ -6,7 +6,7 @@ const config = require('../../config')
 
 const middlewares = {}
 
-middlewares.isAuth (req=request, res=response, next) {
+middlewares.isAuth = (req=request, res=response, next) => {
     if (!req.headers.authorization) 
         return res.status(403).send({message: 'No hay autorización'})
 
